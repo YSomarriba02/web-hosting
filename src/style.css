@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+
+:root {
+    --color-base: #0b0b0c;
+    --color-text: #000000;
+    --color-item: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --color-base: #18191b;
+        --color-text: #ffff;
+        --color-item: #2e2d2d;
+    }
+
+}
