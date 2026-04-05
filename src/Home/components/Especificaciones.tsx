@@ -18,7 +18,7 @@ export default function Especificaciones() {
           Infraestructura de nivel empresarial para tu sitio web
         </h4>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
         <Especificacion
           Icon={HardDrive}
           nombre="Disco"

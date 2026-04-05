@@ -5,6 +5,7 @@
     --color-base: #0b0b0c;
     --color-text: #000000;
     --color-item: #000000;
+    --color-cta: #00000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +14,7 @@
         --color-base: #18191b;
         --color-text: #ffff;
         --color-item: #2e2d2d;
+        --color-cta: #0c84fa;
     }
 
 }
