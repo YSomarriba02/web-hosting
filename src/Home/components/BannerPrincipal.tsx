@@ -7,7 +7,7 @@ import { GlobeLock } from "lucide-react";
 
 export default function BannerPrincipal() {
   return (
-    <div className="p-8 flex flex-col justify-around items-center gap-3.5 min-h-[calc(100vh-200px)] relative rounded-2xl overflow-hidden bg-[url('/imagenes/banner1.jpg')] bg-cover bg-no-repeat saturate-200 md:bg-[url('/imagenes/banner1_tablet.png')] bg-center md:gap-18 md:justify-center lg:h-[calc(100vh-200px)] lg:flex-row">
+    <div className="p-8 flex flex-col justify-around items-center gap-3.5 min-h-[calc(100vh-200px)] relative rounded-4xl overflow-hidden bg-[url('/imagenes/banner1.jpg')] bg-cover bg-no-repeat saturate-200 md:bg-[url('/imagenes/banner1_tablet.png')] bg-center md:gap-18 md:justify-center lg:h-[calc(100vh-200px)] lg:flex-row">
       <div className="flex flex-col gap-8">
         <p className="text-4xl text-center font-semibold lg:text-start lg:px-10 lg:text-5xl ">
           Impulsa tu vision

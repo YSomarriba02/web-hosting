@@ -1,4 +1,5 @@
 import { useContextContratacion } from "../context/contextContratacionTiempo";
+import { mensual, trimestral, anual } from "../../Planes/data/Planes";
 import Plan from "./Plan";
 
 export default function ListPlanes() {
@@ -23,164 +24,38 @@ export default function ListPlanes() {
     >
       {/* Mensual */}
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 min-w-full md:h-min">
-        <Plan
-          nombre={"Esencial"}
-          precio="2.07"
-          recursos={[
-            { nombre: "Almacenamiento", valor: "10 GB SSD" },
-            { nombre: "Sitios", valor: "1" },
-            { nombre: "Ancho de banda", valor: "100 Gb" },
-            { nombre: "Email", valor: "1 cuenta" },
-          ]}
-          herramientas={[
-            "SSLL gratuito",
-            "cPanel",
-            "LiteSpeed Cache",
-            "1-click install",
-          ]}
-        />
-
-        <Plan
-          nombre={"Esencial"}
-          precio="2.07"
-          recursos={[
-            { nombre: "Almacenamiento", valor: "10 GB SSD" },
-            { nombre: "Sitios", valor: "1" },
-            { nombre: "Ancho de banda", valor: "100 Gb" },
-            { nombre: "Email", valor: "1 cuenta" },
-          ]}
-          herramientas={[
-            "SSLL gratuito",
-            "cPanel",
-            "LiteSpeed Cache",
-            "1-click install",
-          ]}
-        />
-
-        <Plan
-          nombre={"Esencial"}
-          precio="2.07"
-          recursos={[
-            { nombre: "Almacenamiento", valor: "10 GB SSD" },
-            { nombre: "Sitios", valor: "1" },
-            { nombre: "Ancho de banda", valor: "100 Gb" },
-            { nombre: "Email", valor: "1 cuenta" },
-          ]}
-          herramientas={[
-            "SSLL gratuito",
-            "cPanel",
-            "LiteSpeed Cache",
-            "1-click install",
-          ]}
-        />
+        {mensual.map(({ nombre, precio, herramientas, recursos }) => (
+          <Plan
+            nombre={nombre}
+            precio={precio}
+            herramientas={herramientas}
+            recursos={recursos}
+          />
+        ))}
       </div>
 
       {/* Trimestral */}
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 min-w-full md:h-min">
-        <Plan
-          nombre={"Esencial"}
-          precio="2.07"
-          recursos={[
-            { nombre: "Almacenamiento", valor: "10 GB SSD" },
-            { nombre: "Sitios", valor: "1" },
-            { nombre: "Ancho de banda", valor: "100 Gb" },
-            { nombre: "Email", valor: "1 cuenta" },
-          ]}
-          herramientas={[
-            "SSLL gratuito",
-            "cPanel",
-            "LiteSpeed Cache",
-            "1-click install",
-          ]}
-        />
-
-        <Plan
-          nombre={"Esencial"}
-          precio="2.07"
-          recursos={[
-            { nombre: "Almacenamiento", valor: "10 GB SSD" },
-            { nombre: "Sitios", valor: "1" },
-            { nombre: "Ancho de banda", valor: "100 Gb" },
-            { nombre: "Email", valor: "1 cuenta" },
-          ]}
-          herramientas={[
-            "SSLL gratuito",
-            "cPanel",
-            "LiteSpeed Cache",
-            "1-click install",
-          ]}
-        />
-
-        <Plan
-          nombre={"Esencial"}
-          precio="2.07"
-          recursos={[
-            { nombre: "Almacenamiento", valor: "10 GB SSD" },
-            { nombre: "Sitios", valor: "1" },
-            { nombre: "Ancho de banda", valor: "100 Gb" },
-            { nombre: "Email", valor: "1 cuenta" },
-          ]}
-          herramientas={[
-            "SSLL gratuito",
-            "cPanel",
-            "LiteSpeed Cache",
-            "1-click install",
-          ]}
-        />
+        {trimestral.map(({ nombre, precio, herramientas, recursos }) => (
+          <Plan
+            nombre={nombre}
+            precio={precio}
+            herramientas={herramientas}
+            recursos={recursos}
+          />
+        ))}
       </div>
 
       {/* Anual */}
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 min-w-full md:h-min">
-        <Plan
-          nombre={"Esencial"}
-          precio="2.07"
-          recursos={[
-            { nombre: "Almacenamiento", valor: "10 GB SSD" },
-            { nombre: "Sitios", valor: "1" },
-            { nombre: "Ancho de banda", valor: "100 Gb" },
-            { nombre: "Email", valor: "1 cuenta" },
-          ]}
-          herramientas={[
-            "SSLL gratuito",
-            "cPanel",
-            "LiteSpeed Cache",
-            "1-click install",
-          ]}
-        />
-
-        <Plan
-          nombre={"Esencial"}
-          precio="2.07"
-          recursos={[
-            { nombre: "Almacenamiento", valor: "10 GB SSD" },
-            { nombre: "Sitios", valor: "1" },
-            { nombre: "Ancho de banda", valor: "100 Gb" },
-            { nombre: "Email", valor: "1 cuenta" },
-          ]}
-          herramientas={[
-            "SSLL gratuito",
-            "cPanel",
-            "LiteSpeed Cache",
-            "1-click install",
-          ]}
-        />
-
-        <Plan
-          nombre={"Esencial"}
-          precio="2.07"
-          recursos={[
-            { nombre: "Almacenamiento", valor: "10 GB SSD" },
-            { nombre: "Sitios", valor: "1" },
-            { nombre: "Ancho de banda", valor: "100 Gb" },
-            { nombre: "Email", valor: "1 cuenta" },
-          ]}
-          herramientas={[
-            "SSLL gratuito",
-            "cPanel",
-            "LiteSpeed Cache",
-            "1-click install",
-          ]}
-        />
+        {anual.map(({ nombre, precio, herramientas, recursos }) => (
+          <Plan
+            nombre={nombre}
+            precio={precio}
+            herramientas={herramientas}
+            recursos={recursos}
+          />
+        ))}
       </div>
     </div>
   );

@@ -1,3 +1,9 @@
+import Questions from "./components/Questions";
+
 export default function Page() {
-  return <div>pagina nosotros</div>;
+  return (
+    <div>
+      <Questions />
+    </div>
+  );
 }

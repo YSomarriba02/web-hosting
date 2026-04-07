@@ -2,6 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import BarraNavegacionMovil from "./components/BarraNavegacionMovil";
 import HeaderNav from "./components/HeaderNav";
 import Router from "./Router/Router";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           </div>
 
           <BarraNavegacionMovil />
+          <Footer />
         </div>
       </main>
     </BrowserRouter>

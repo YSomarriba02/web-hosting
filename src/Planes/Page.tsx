@@ -1,3 +1,5 @@
+import Planes from "../Home/components/Planes";
+
 export default function Page() {
-  return <div>Lista de planes</div>;
+  return <Planes />;
 }
