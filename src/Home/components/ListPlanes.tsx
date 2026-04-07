@@ -25,11 +25,19 @@ export default function ListPlanes() {
       {/* Mensual */}
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 min-w-full md:h-min">
         {mensual.map(
-          ({ nombre, precio, precioAnterior, herramientas, recursos }) => (
+          ({
+            nombre,
+            precio,
+            precioAnterior,
+            isPopular,
+            herramientas,
+            recursos,
+          }) => (
             <Plan
               nombre={nombre}
               precio={precio}
               precioAnterior={precioAnterior}
+              isPopular={isPopular}
               tiempo="mensual"
               herramientas={herramientas}
               recursos={recursos}
@@ -41,11 +49,19 @@ export default function ListPlanes() {
       {/* Trimestral */}
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 min-w-full md:h-min">
         {trimestral.map(
-          ({ nombre, precio, precioAnterior, herramientas, recursos }) => (
+          ({
+            nombre,
+            precio,
+            precioAnterior,
+            isPopular,
+            herramientas,
+            recursos,
+          }) => (
             <Plan
               nombre={nombre}
               precio={precio}
               precioAnterior={precioAnterior}
+              isPopular={isPopular}
               tiempo="trimestral"
               herramientas={herramientas}
               recursos={recursos}
@@ -57,11 +73,19 @@ export default function ListPlanes() {
       {/* Anual */}
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 min-w-full md:h-min">
         {anual.map(
-          ({ nombre, precio, precioAnterior, herramientas, recursos }) => (
+          ({
+            nombre,
+            precio,
+            precioAnterior,
+            isPopular,
+            herramientas,
+            recursos,
+          }) => (
             <Plan
               nombre={nombre}
               precio={precio}
               precioAnterior={precioAnterior}
+              isPopular={isPopular}
               tiempo="anual"
               herramientas={herramientas}
               recursos={recursos}

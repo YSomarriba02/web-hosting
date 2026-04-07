@@ -7,6 +7,7 @@ export interface Plan {
     nombre: string;
     precio: string;
     precioAnterior: string,
+    isPopular?: boolean;
     recursos: recursos[];
     herramientas: string[];
 }
@@ -30,6 +31,7 @@ const pro: Plan = {
     nombre: "Pro",
     precio: "9.99",
     precioAnterior: "12.99",
+    isPopular: true,
     herramientas: ["SSL gratuito", "cPanel", "Hasts 3x más rápido(LiteSpeed)", "Crea tu sitio en minutos (SitePad)", "Aislamiento total(CloudLinux)", "Backups diarios (Jetbackup)", "1-click install", "Protección anti-malware(Monarx)"],
     recursos: [
         { nombre: "Almacenamiento", valor: "25 GB NVMe SSD" },

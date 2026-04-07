@@ -3,7 +3,6 @@ import { Check } from "lucide-react";
 
 type props = IPlan & {
   tiempo: "mensual" | "trimestral" | "anual";
-  isPopular?: boolean;
 };
 
 export default function Plan({
@@ -16,9 +15,20 @@ export default function Plan({
   recursos,
 }: props) {
   return (
-    <div className="bg-(--color-item) px-4 py-8 pb-6 flex flex-col gap-4 rounded-2xl last:col-span-full last:justify-self-center last:max-w-95 w-full lg:last:col-auto">
+    <div
+      className={`relative bg-(--color-item) px-4 py-8 pb-6 flex flex-col gap-4 rounded-2xl last:col-span-full last:justify-self-center last:max-w-95 w-full lg:last:col-auto ${isPopular ? "border-2 border-blue-600" : ""} ${nombre === "Supreme" ? "border-2 border-yellow-300" : ""}`}
+    >
+      {isPopular && (
+        <span className="absolute right-1 top-1 bg-blue-500 px-3 py-0.5 rounded-tr-xl font-medium text-sm">
+          Más popular
+        </span>
+      )}
       <div>
-        <h5 className="font-bold text-2xl">{nombre}</h5>
+        <h5
+          className={`font-bold text-2xl ${nombre === "Supreme" ? "text-yellow-300" : ""}`}
+        >
+          {nombre}
+        </h5>
         <h5 className="font-bold text-3xl">
           ${precio}{" "}
           <span className="text-sm brightness-75">
@@ -49,7 +59,10 @@ export default function Plan({
           herramientas.map((e) => {
             return (
               <div className="flex gap-2 items-center">
-                <Check color="#0c81f5" size={14} />
+                <Check
+                  size={14}
+                  className={`text-[#0883ff] ${nombre === "Supreme" ? "text-amber-300" : ""}`}
+                />
                 <span className="text-sm font-medium">{e}</span>
               </div>
             );
