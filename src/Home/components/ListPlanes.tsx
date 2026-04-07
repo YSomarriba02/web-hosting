@@ -24,38 +24,50 @@ export default function ListPlanes() {
     >
       {/* Mensual */}
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 min-w-full md:h-min">
-        {mensual.map(({ nombre, precio, herramientas, recursos }) => (
-          <Plan
-            nombre={nombre}
-            precio={precio}
-            herramientas={herramientas}
-            recursos={recursos}
-          />
-        ))}
+        {mensual.map(
+          ({ nombre, precio, precioAnterior, herramientas, recursos }) => (
+            <Plan
+              nombre={nombre}
+              precio={precio}
+              precioAnterior={precioAnterior}
+              tiempo="mensual"
+              herramientas={herramientas}
+              recursos={recursos}
+            />
+          ),
+        )}
       </div>
 
       {/* Trimestral */}
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 min-w-full md:h-min">
-        {trimestral.map(({ nombre, precio, herramientas, recursos }) => (
-          <Plan
-            nombre={nombre}
-            precio={precio}
-            herramientas={herramientas}
-            recursos={recursos}
-          />
-        ))}
+        {trimestral.map(
+          ({ nombre, precio, precioAnterior, herramientas, recursos }) => (
+            <Plan
+              nombre={nombre}
+              precio={precio}
+              precioAnterior={precioAnterior}
+              tiempo="trimestral"
+              herramientas={herramientas}
+              recursos={recursos}
+            />
+          ),
+        )}
       </div>
 
       {/* Anual */}
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 min-w-full md:h-min">
-        {anual.map(({ nombre, precio, herramientas, recursos }) => (
-          <Plan
-            nombre={nombre}
-            precio={precio}
-            herramientas={herramientas}
-            recursos={recursos}
-          />
-        ))}
+        {anual.map(
+          ({ nombre, precio, precioAnterior, herramientas, recursos }) => (
+            <Plan
+              nombre={nombre}
+              precio={precio}
+              precioAnterior={precioAnterior}
+              tiempo="anual"
+              herramientas={herramientas}
+              recursos={recursos}
+            />
+          ),
+        )}
       </div>
     </div>
   );
