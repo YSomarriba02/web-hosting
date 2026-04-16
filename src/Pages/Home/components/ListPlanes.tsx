@@ -34,6 +34,7 @@ export default function ListPlanes() {
             recursos,
           }) => (
             <Plan
+              key={nombre}
               nombre={nombre}
               precio={precio}
               precioAnterior={precioAnterior}
@@ -58,6 +59,7 @@ export default function ListPlanes() {
             recursos,
           }) => (
             <Plan
+              key={nombre}
               nombre={nombre}
               precio={precio}
               precioAnterior={precioAnterior}
@@ -82,6 +84,7 @@ export default function ListPlanes() {
             recursos,
           }) => (
             <Plan
+              key={nombre}
               nombre={nombre}
               precio={precio}
               precioAnterior={precioAnterior}

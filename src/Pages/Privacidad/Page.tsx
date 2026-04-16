@@ -1,4 +1,4 @@
-import ItemLi from "../components/ItemLi";
+import ItemLi from "../../components/ItemLi";
 import { privacidades } from "./data/privacidades";
 export default function Privacidad() {
   return (

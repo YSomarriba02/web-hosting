@@ -1,7 +1,96 @@
 @import "tailwindcss";
 
+@view-transition {
+    navigate: auto;
+}
+
+
+
+::view-transition-group(no) {
+    animation: none;
+}
+
+
+/* Para navegacion de izq - der */
+.fordward::view-transition-old(root) {
+    animation: slide-to-left ease backwards;
+    animation-duration: var(--time-viewtransitionpage);
+}
+
+.fordward::view-transition-new(root) {
+    animation: slide-to-right ease backwards;
+    animation-duration: var(--time-viewtransitionpage);
+
+}
+
+/* Para navegacion de der - izq */
+.backward::view-transition-old(root) {
+    animation: slide-to-centerright ease backwards;
+    animation-duration: var(--time-viewtransitionpage);
+
+}
+
+.backward::view-transition-new(root) {
+    animation: slide-to-leftcenter ease backwards;
+    animation-duration: var(--time-viewtransitionpage);
+
+}
+
+body {
+    background-color: #000000;
+}
+
+
+@keyframes slide-to-leftcenter {
+    from {
+        transform: translateX(-130%) scale(60%);
+    }
+
+    to {
+        transform: translateX(0%) scale(100%);
+    }
+}
+
+@keyframes slide-to-centerright {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(100%) scale(60%);
+    }
+}
+
+
+@keyframes slide-to-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-100%) scale(60%);
+    }
+}
+
+@keyframes slide-to-right {
+    from {
+        transform: translateX(130%) scale(60%);
+    }
+
+    to {
+        transform: translateX(0%) scale(100%);
+    }
+}
+
+
+
+
+
 html {
     interpolate-size: allow-keywords;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -11,6 +100,7 @@ html {
     --color-cta: #00000;
     --color-base2: #0f0f0f00;
 
+    --time-viewtransitionpage: 400ms;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,4 +112,126 @@ html {
         --color-cta: #0c84fa;
         --color-base2: #132b5f;
     }
+}
+
+
+
+
+
+
+
+@theme {
+    --animate-BtnWhatsApp: BtnWhatsApp 300ms ease forwards 1s;
+    --animate-entradah1: entradah1 500ms ease both 200ms;
+
+    @keyframes BtnWhatsApp {
+        0% {
+            right: -14vw;
+        }
+
+        60% {
+            transform: rotate(0deg);
+
+        }
+
+        100% {
+            transform: rotate(360deg);
+            right: 2%;
+        }
+    }
+
+
+
+
+    @keyframes entradah1 {
+        from {
+            opacity: 0;
+            filter: blur(22px);
+            transform: translateY(-100%);
+        }
+
+        to {
+            opacity: 1;
+            filter: blur(0px);
+            transform: translateY(0%);
+        }
+    }
+}
+
+
+
+
+@keyframes entradaTextoBanner {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateY(70%);
+    }
+
+    to {
+        opacity: 100;
+        transform: translateY(0%);
+        filter: blur(0px);
+    }
+}
+
+@keyframes entradaCard {
+    from {
+        filter: blur(15px);
+        transform: translateX(100%);
+        opacity: 0.3;
+        scale: 0.7;
+    }
+
+    to {
+        filter: blur(0px);
+        transform: translateX(0%);
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes entradaCard2 {
+    from {
+        filter: blur(15px);
+
+        transform: translateX(-100%);
+        opacity: 0.3;
+        scale: 0.7;
+    }
+
+    to {
+        filter: blur(0px);
+
+        transform: translateX(0%);
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@layer utilities {
+    .animate-entradaTextoBanner {
+        animation-name: entradaTextoBanner;
+        animation-timing-function: ease;
+        animation-fill-mode: backwards;
+        animation-duration: 400ms;
+    }
+
+    .card {
+        animation-name: entradaCard;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-timeline: view();
+        animation-range: entry 10% cover 50%;
+    }
+
+    .card:nth-child(2) {
+        animation-name: entradaCard2;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-timeline: view();
+        animation-range: entry 10% cover 50%;
+    }
+
+
 }

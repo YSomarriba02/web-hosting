@@ -54,14 +54,18 @@ export default function Question({
       className={`relative rounded-2xl px-4 transition-[height,background] duration-300 ease-in-out flex flex-col ${isOpen ? "bg-(--color-item) before:opacity-0" : "before:opacity-100"} overflow-hidden before:absolute before:w-full before:h-px before:bottom-0  before:bg-gray-300`}
     >
       <div ref={refTitle} className="py-4 flex justify-between">
-        <h4 className="md:text-lg">{title}</h4>
+        <h4
+          className={`md:text-lg ${isOpen ? "text-(--color-cta) [text-shadow:1px_1px_4px_var(--color-cta)]" : ""} transition-[color,text-shadow] ease-in duration-150`}
+        >
+          {title}
+        </h4>
         <ChevronDown
           className={`transition-transform ease-out duration-150 ${isOpen ? "rotate-180" : ""}`}
         />
       </div>
       <div
         ref={refBody}
-        className={`pb-2 brightness-95 ${isOpen ? "opacity-100" : "opacity-0"} transition-opacity duration-200 ease-in text-sm brightness-75 md:text-sm`}
+        className={`pb-2 brightness-95 ${isOpen ? "opacity-100 text-sky-300" : "opacity-0"} transition-[color,transform] duration-200 ease-in text-sm brightness-75 md:text-sm`}
       >
         {body}
       </div>

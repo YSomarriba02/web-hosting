@@ -7,7 +7,7 @@ interface props {
 }
 export default function Card({ image, text, title }: props) {
   return (
-    <div className="rounded-3xl p-4 min-h-[calc(100vh-30vh)]  bg-slate flex flex-col items-center gap-2 overflow-hidden md:p-8 lg:flex-row-reverse lg:gap-10 lg:even:flex-row">
+    <div className="card rounded-3xl p-4 min-h-[calc(100vh-30vh)]  bg-slate flex flex-col items-center gap-2 overflow-hidden md:p-8 lg:flex-row-reverse lg:gap-10 lg:even:flex-row">
       <div className="flex h-1/2 rounded-3xl overflow-clip mask-[linear-gradient(to_bottom,black_70%,transparent)] md:h-[50vh] lg:justify-center lg:w-full">
         <img src={image} className="h-full aspect-square lg:rounded-4xl" />
       </div>

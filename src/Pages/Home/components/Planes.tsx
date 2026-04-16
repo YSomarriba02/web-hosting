@@ -5,7 +5,7 @@ import ListPlanes from "./ListPlanes";
 export default function Planes() {
   return (
     <ProviderContratacion>
-      <section className="flex flex-col gap-6">
+      <section className="flex flex-col gap-6" id="planes">
         <div className="flex flex-col gap-4">
           <h3 className="font-semibold text-3xl text-center">
             Planes de Hosting Nicaragua

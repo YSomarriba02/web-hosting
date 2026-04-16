@@ -1,5 +1,9 @@
 import Planes from "../Home/components/Planes";
 
 export default function Page() {
-  return <Planes />;
+  return (
+    <div>
+      <Planes />
+    </div>
+  );
 }
