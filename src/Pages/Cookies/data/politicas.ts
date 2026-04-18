@@ -1,4 +1,4 @@
-import type typeItemLi from "../../types/ItemLi";
+import type typeItemLi from "../../../types/ItemLi";
 
 export const politicas: typeItemLi[] = [
     {

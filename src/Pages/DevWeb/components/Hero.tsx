@@ -33,9 +33,12 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <button className="mt-[10%] bg-(--color-cta) p-2 w-max rounded-2xl font-medium lg:p-4 lg:px-[6%]">
+      <a
+        href="#planesweb"
+        className="mt-[10%] bg-(--color-cta) p-2 w-max rounded-2xl font-medium lg:p-4 lg:px-[6%]"
+      >
         Crear mi web ahora
-      </button>
+      </a>
     </div>
   );
 }

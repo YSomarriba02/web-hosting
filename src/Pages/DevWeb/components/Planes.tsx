@@ -3,7 +3,10 @@ import Plan from "./Plan";
 
 export default function Planes() {
   return (
-    <section className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
+    <section
+      id="planesweb"
+      className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6"
+    >
       {planes.length > 0 &&
         planes.map(
           (

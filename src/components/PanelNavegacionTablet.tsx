@@ -1,4 +1,3 @@
-import { House, ChartNoAxesGantt, Headset, Bolt } from "lucide-react";
 import LinkPanel from "./LinkPanel";
 import { linksArray } from "../data/links";
 

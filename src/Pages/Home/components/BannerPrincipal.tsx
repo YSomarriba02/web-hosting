@@ -24,20 +24,16 @@ export default function BannerPrincipal() {
 
       <div className="w-full flex flex-col items-center gap-6 px-2">
         <BannerCard
-          text="Built for speed"
+          text="CDN Global"
           Icon={GlobeLock}
           durationAnimation={200}
         />
         <BannerCard
-          text="Built for speed"
+          text="Velocidad Extrema"
           Icon={Gauge}
           durationAnimation={400}
         />
-        <BannerCard
-          text="Built for speed"
-          Icon={Clock}
-          durationAnimation={600}
-        />
+        <BannerCard text="99.99% Uptime" Icon={Clock} durationAnimation={600} />
       </div>
       <footer className="flex flex-col items-center gap-4 md:px-10 md:gap-6 lg:hidden">
         <p className="text-center font-medium md:text-2xl">
