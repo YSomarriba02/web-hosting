@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import type { ContratacionTiempo } from "../components/NavContratacionTiempo";
+import type { ContratacionTiempo } from "../../Planes/components/NavContratacionTiempo";
 
 interface contextContratacion {
   contratacionTiempo: ContratacionTiempo;

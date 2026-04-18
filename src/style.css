@@ -11,39 +11,45 @@
 }
 
 
+::view-transition-group(root) {
+    overflow: hidden;
+    isolation: isolate;
+
+}
+
 /* Para navegacion de izq - der */
 .fordward::view-transition-old(root) {
-    animation: slide-to-left ease backwards;
+    animation: slide-to-left ease forwards;
     animation-duration: var(--time-viewtransitionpage);
 }
 
 .fordward::view-transition-new(root) {
     animation: slide-to-right ease backwards;
+    animation-delay: var(--delay-viewtransitionpage);
     animation-duration: var(--time-viewtransitionpage);
-
 }
 
 /* Para navegacion de der - izq */
 .backward::view-transition-old(root) {
-    animation: slide-to-centerright ease backwards;
+    animation: slide-to-centerright ease forwards;
     animation-duration: var(--time-viewtransitionpage);
-
 }
 
 .backward::view-transition-new(root) {
     animation: slide-to-leftcenter ease backwards;
+    animation-delay: var(--delay-viewtransitionpage);
     animation-duration: var(--time-viewtransitionpage);
 
 }
 
 body {
-    background-color: #000000;
+    background-color: var(--color-base);
 }
 
 
 @keyframes slide-to-leftcenter {
     from {
-        transform: translateX(-130%) scale(60%);
+        transform: translateX(-100%) scale(60%);
     }
 
     to {
@@ -76,7 +82,7 @@ body {
 
 @keyframes slide-to-right {
     from {
-        transform: translateX(130%) scale(60%);
+        transform: translateX(100%) scale(60%);
     }
 
     to {
@@ -101,6 +107,7 @@ html {
     --color-base2: #0f0f0f00;
 
     --time-viewtransitionpage: 400ms;
+    --delay-viewtransitionpage: 200ms;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -11,7 +11,7 @@ export default function Page() {
     <div>
       <section className={`flex flex-col items-center gap-4 lg:px-[0vw] mb-20`}>
         <div
-          className={`rounded-2xl overflow-hidden flex flex-col justify-center px-[5vw] h-[75vh] relative text-(--color-base) bg-[url('/imagenes/banner_contactanos2.jpg')] bg-no-repeat bg-cover bg-right  md:brightness-100 md:bg-position-[top,left]`}
+          className={`rounded-2xl overflow-hidden flex flex-col justify-center px-[5vw] h-[70vh] relative text-(--color-base) bg-[url('/imagenes/banner_contactanos2.jpg')] bg-no-repeat bg-cover bg-right  md:brightness-100 md:bg-position-[top,left]`}
         >
           <div className="w-full flex flex-col gap-10 lg:w-1/2 md:gap-4">
             <h2 className="text-(--color-text) w-full font-semibold text-[28px] md:text-4xl md:text-(--color-fondo) lg:w-[40vw]">

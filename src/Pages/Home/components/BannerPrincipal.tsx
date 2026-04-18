@@ -15,8 +15,8 @@ export default function BannerPrincipal() {
 
         <footer className="hidden flex-col gap-4 md:px-10 md:gap-6 lg:flex">
           <p className="font-medium md:text-2xl brightness-75">
-            Obtén alojamiento web räpido y confiablc desdc solo USD después de
-            la prucba.
+            Obtén alojamiento web rápido y confiable desde solo USD 5.99 al mes,
+            dominio gratuito y mas.
           </p>
           <ButtonInicioRapido />
         </footer>

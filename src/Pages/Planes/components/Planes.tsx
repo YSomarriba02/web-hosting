@@ -1,5 +1,5 @@
 import NavContratacionTiempo from "./NavContratacionTiempo";
-import { ProviderContratacion } from "../context/contextContratacionTiempo";
+import { ProviderContratacion } from "../../Home/context/contextContratacionTiempo";
 import ListPlanes from "./ListPlanes";
 
 export default function Planes() {

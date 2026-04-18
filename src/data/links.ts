@@ -12,6 +12,6 @@ interface Link {
 export const linksArray: Link[] = [
     { link: "/", text: "Home", icon: House },
     { link: "/planes", text: "Planes", icon: ChartNoAxesGantt },
-    { link: "/web", text: "Creamos tu web", icon: Sparkle },
+    { link: "/web", text: "Creación", icon: Sparkle },
     { link: "/nosotros", text: "Contactanos", icon: Headset }
 ]

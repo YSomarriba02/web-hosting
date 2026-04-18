@@ -1,4 +1,4 @@
-import { useContextContratacion } from "../context/contextContratacionTiempo";
+import { useContextContratacion } from "../../Home/context/contextContratacionTiempo";
 import type { ContratacionTiempo } from "./NavContratacionTiempo";
 
 interface props {

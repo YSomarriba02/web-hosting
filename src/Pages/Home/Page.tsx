@@ -1,7 +1,7 @@
 import BannerPrincipal from "./components/BannerPrincipal";
 import Card from "./components/Card";
 import Especificaciones from "./components/Especificaciones";
-import Planes from "./components/Planes";
+import Planes from "../Planes/components/Planes";
 
 export default function Page() {
   return (

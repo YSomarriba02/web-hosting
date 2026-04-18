@@ -1,6 +1,6 @@
-import { useContextContratacion } from "../context/contextContratacionTiempo";
-import { mensual, trimestral, anual } from "../../Planes/data/Planes";
-import Plan from "./Plan";
+import { useContextContratacion } from "../../Home/context/contextContratacionTiempo";
+import { mensual, trimestral, anual } from "../data/Planes";
+import Plan from "../components/Plan";
 
 export default function ListPlanes() {
   const contextContratacion = useContextContratacion();

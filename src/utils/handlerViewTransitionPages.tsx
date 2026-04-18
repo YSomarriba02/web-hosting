@@ -15,14 +15,16 @@ export default function useViewTransitionPages({
 
   function handlerTransition() {
     const root = document.documentElement;
-    root.classList.remove("backward", "fordward");
+    console.log("se hizo");
 
     if (indice === paginaActual) {
       return;
     }
     if (indice < paginaActual) {
+      root.classList.remove("fordward");
       root.classList.add("backward");
     } else {
+      root.classList.remove("backward");
       root.classList.add("fordward");
     }
 

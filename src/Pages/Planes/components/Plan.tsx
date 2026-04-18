@@ -1,5 +1,6 @@
-import { type Plan as IPlan } from "../../Planes/data/Planes";
+import { type Plan as IPlan } from "../data/Planes";
 import { Check } from "lucide-react";
+import BtnPlan from "./BtnPlan";
 
 type props = IPlan & {
   tiempo: "mensual" | "trimestral" | "anual";
@@ -68,9 +69,7 @@ export default function Plan({
             );
           })}
       </div>
-      <button className="mt-auto bg-(--color-cta) p-2.5 rounded-sm hover:opacity-90 hover:scale-[98%] transition-[background,scale] ease-initial duration-100">
-        Comenzar
-      </button>
+      <BtnPlan plan={nombre} precio={precio} tiempo={tiempo} />
     </div>
   );
 }

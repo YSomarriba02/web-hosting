@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <ProviderContextPagina>
         <ScrollToTop />
-        <main>
+        <main className="">
           <div className="overflow-clip bg-(--color-base) text-(--color-text) p-8 pb-30 px-6 flex flex-col gap-8 md:p-18 lg:p-24 lg:pt-8">
             <HeaderNav />
             <div className="min-h-screen">
