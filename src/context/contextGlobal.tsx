@@ -13,7 +13,7 @@ export function ProviderContextPagina({
 }: {
   children: React.ReactNode;
 }) {
-  const [indice, setIndice] = useState(0);
+  const [indice, setIndice] = useState(3);
   const [indiceAnterior, setIndiceAnterior] = useState(0);
 
   function handlePaginaActual(linkClicki: number) {
