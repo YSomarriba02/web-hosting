@@ -1,11 +1,10 @@
 const delayEntrada =
   "[calc(var(--delay-viewtransitionpage)+var(--time-viewtransitionpage))]";
 export default function Hero() {
-  console.log("Se monto");
 
   return (
-    <div className="flex flex-col justify-center px-8 pt-[10%]  md:pt-[18%] md:px-18 h-[70vh] w-full bg-[url('/imagenes/hero_creamostuweb_movil.jpg')] bg-cover bg-no-repeat rounded-2xl lg:bg-[url('/imagenes/hero_creamostuweb.jpg')] lg:pt-[7%] lg:px-22">
-      <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-6 justify-center px-8 pt-[10%]  md:pt-[18%] md:px-18 h-[70vh] w-full bg-[url('/imagenes/hero_creamostuweb_movil.jpg')] bg-cover bg-no-repeat rounded-2xl lg:bg-[url('/imagenes/hero_creamostuweb.jpg')] lg:pt-[7%] lg:px-22">
+      <div className="flex flex-col">
         <div className="flex flex-col gap-3 lg:gap-5">
           <h2
             className={`text-3xl font-semibold opacity-100 translate-y-0 starting:opacity-0 starting:-translate-y-[200%] transition-[opacity,translate] duration-200 ease-in delay-${delayEntrada} md:text-4xl lg:text-5xl`}
@@ -35,7 +34,7 @@ export default function Hero() {
       </div>
       <a
         href="#planesweb"
-        className="mt-[10%] bg-(--color-cta) p-2 w-max rounded-2xl font-medium lg:p-4 lg:px-[6%]"
+        className="bg-(--color-cta) p-2 w-max rounded-2xl font-medium lg:p-4 lg:px-[6%]"
       >
         Crear mi web ahora
       </a>

@@ -17,6 +17,7 @@ export default function useViewTransitionPages({
     const root = document.documentElement;
     console.log("se hizo");
 
+
     if (indice === paginaActual) {
       return;
     }
