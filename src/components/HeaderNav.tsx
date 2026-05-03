@@ -15,7 +15,7 @@ export default function HeaderNav() {
     >
       <Link to={"/"} className="flex gap-4 items-center">
         <img src="/icons/icon_fastucloud.png" alt="" className="size-10" />
-        <p className="text-2xl font-semibold">Fastucloud</p>
+        <p className="text-2xl font-semibold">Flashnube</p>
       </Link>
 
       <div className="hidden lg:flex gap-3">
